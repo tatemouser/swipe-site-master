@@ -4,23 +4,23 @@ import TinderCard from 'react-tinder-card'
 const db = [
   {
     name: 'Richard Hendricks',
-    url: './img/richard.jpg'
+    url: 'https://hips.hearstapps.com/hmg-prod/images/beautiful-smooth-haired-red-cat-lies-on-the-sofa-royalty-free-image-1678488026.jpg'
   },
   {
     name: 'Erlich Bachman',
-    url: './img/erlich.jpg'
+    url: 'https://cdn.theatlantic.com/thumbor/B7U27JF25tScMZkCe5Pl9EqXjao=/0x131:2555x1568/960x540/media/img/mt/2017/06/shutterstock_319985324/original.jpg'
   },
   {
     name: 'Monica Hall',
-    url: './img/monica.jpg'
+    url: 'https://d2zp5xs5cp8zlg.cloudfront.net/image-53920-800.jpg'
   },
   {
     name: 'Jared Dunn',
-    url: './img/jared.jpg'
+    url: 'https://nationalzoo.si.edu/sites/default/files/styles/wide/public/animals/20110217-116mm.jpg?itok=U5y7Rywn'
   },
   {
     name: 'Dinesh Chugtai',
-    url: './img/dinesh.jpg'
+    url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVhRv3yyrNtvhpbL3AhUSuZ_f1EW7PE4qNEEXW3qpbBA&s'
   }
 ]
 
@@ -86,7 +86,7 @@ function Advanced () {
         href='https://fonts.googleapis.com/css?family=Alatsi&display=swap'
         rel='stylesheet'
       />
-      <h1>React Tinder Card</h1>
+      <h1>Swipe!</h1>
       <div className='cardContainer'>
         {db.map((character, index) => (
           <TinderCard
@@ -106,13 +106,16 @@ function Advanced () {
         ))}
       </div>
       <div className='buttons'>
-        <button style={{ backgroundColor: !canSwipe && '#c3c4d3' }} onClick={() => swipe('left')}>Swipe left!</button>
-        <button style={{ backgroundColor: !canGoBack && '#c3c4d3' }} onClick={() => goBack()}>Undo swipe!</button>
-        <button style={{ backgroundColor: !canSwipe && '#c3c4d3' }} onClick={() => swipe('right')}>Swipe right!</button>
+        <button style={{ backgroundColor: !canSwipe && '#c3c4d3' }} onClick={() => swipe('left')}>Skip</button>
+        <button style={{ backgroundColor: !canSwipe && '#c3c4d3' }} onClick={() => swipe('right')}>Add</button>
       </div>
+      <div className='undo-button'>
+        <button style={{ backgroundColor: !canGoBack && '#c3c4d3' }} onClick={() => goBack()}>Undo swipe!</button>
+      </div>
+
       {lastDirection ? (
         <h2 key={lastDirection} className='infoText'>
-          You swiped {lastDirection}
+          {lastDirection === 'right' ? 'Good Choice!' : 'Keep trying!'}
         </h2>
       ) : (
         <h2 className='infoText'>
