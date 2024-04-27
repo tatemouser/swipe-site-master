@@ -1,0 +1,22 @@
+TODO:
+CLEAN WORKSPACE
+
+Session entity for non logged in users
+Login system
+
+UI Works
+    Pages
+        Login
+            Login
+            Inputs
+            Sign up   
+        Game 
+            Get more items
+            Filter items
+            Go to cart
+            Logout
+        Cart 
+            Show items
+            Filter items
+            Go to Game
+            Login
