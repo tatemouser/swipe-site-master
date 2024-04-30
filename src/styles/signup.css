@@ -22,8 +22,16 @@ body {
     text-align: center;
 }
 
+h1 {
+    text-align: center;
+}
+
 h2 {
     margin-bottom: 20px;
+}
+
+p {
+    text-align: left;
 }
 
 .input-group {
@@ -43,19 +51,28 @@ select {
     width: calc(100% - 10px);
     padding: 10px;
     border: none;
-    border-radius: 5px;
     background-color: #444;
     color: #fff;
 }
 
 .btn {
+    width: 100%;
     padding: 10px 20px;
-    background-color: #007bff;
-    color: #fff;
+    background-color: #d2d2d2;
+    color: #000000;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    font-weight: bold;
 }
+
+.login-btn {
+    width: 10%;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
 
 .signup-link {
     margin-top: 20px;
@@ -86,6 +103,7 @@ select {
 .gender-buttons {
     display: flex;
     justify-content: space-between;
+    color: black;
 }
 
 .gender-btn {
